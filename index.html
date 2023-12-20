@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Metric Magician</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col text-center mt-5" style="color:  blue;">
+                <h1>Metric Magician</h1>
+            </div>
+        </div>
+
+
+        <div class="row mt-3">
+
+            <div class="card-deck" style="margin-left: 8%;">
+                <!-- <div class="col-5 offset-1"> -->
+                    <div class="card" style="background-color: #00d3ff70;">
+                        <div class="card-body mt-5">
+                            <div class="row">
+                                <div class="col-3">
+                                    <h4>From :</h4>
+                                </div>
+    
+                                <div class="form-group col-4">
+                                    <select onchange="update()" id="inputState" class="form-control">
+                                      <option value="notSelected" selected>Choose...</option>
+                                    </select>
+                                </div>
+    
+                                <div class="form-group col-5">
+                                    <input onchange="enableFind()" placeholder="Input Value" type="text" class="form-control" id="input" disabled>
+                                </div>
+                            </div>
+    
+                            <hr>
+    
+                            <div class="row">
+                                <div class="col-3">
+                                    <h4>To :</h4>
+                                </div>
+    
+                                <div class="form-group col-4">
+                                    <select onclick="enableFind()" id="inputState1" class="form-control" disabled>
+                                        <option value="notSelected" selected>Choose...</option>
+                                    </select>
+                                </div>
+    
+                                <div class="form-group col-5">
+                                    <input type="text" class="form-control" placeholder="OutPut Result" id="output" disabled>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button onclick="location.reload()" type="reset" class="btn btn-warning mr-1">Reset</button>
+                                    <button onclick="calculate()" disabled id="submitBtn" type="button" class="btn btn-success ml-1">Calculate</button>
+                                </div>
+                                
+                                <!-- <div class="col offset-5">
+                                </div> -->
+                            </div>
+                        </div>
+    
+                    </div>
+                <!-- </div> -->
+    
+                <!-- <div class="col-5"> -->
+                    <div class="card" style="background-color: #00d3ff70;">
+                        <div class="card-header card2-header text-center">
+                            <h2>Basic Information</h2>
+                        </div>
+                        <div class="card-body card2-body" id="openArea">
+    
+                            <!-- <h4>
+                                <p>5 Meter -hbhb </p>
+                                <p><strong>Formula :- </strong> gygg hjv</p>
+                            </h4> -->
+                                <ul><li>1 millimeter (mm) = 1 millimeter (mm)</li>
+                                <li>10 millimeters (mm) = 1 centimeter (cm)</li>
+                                <li>100 millimeters (mm) = 1 decimeter (dm)</li>
+                                <li>1000 millimeters (mm) = 1 meter (m)</li>
+                                <li>1000000 millimeters (mm) = 1 kilometer (km)</li>
+                                <li>304.8 millimeters (mm) = 1 foot (ft)</li>
+                                <li>25.4 millimeters (mm) = 1 inch (in)</li>
+                                <li>1609344 millimeters (mm) = 1 mile (mi)</li>
+                                <li>914.4 millimeters (mm) = 1 yard (yd)</li></ul>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+
+        </div>
+
+        <div class="row mt-3">
+            <div class="col text-center">
+                <h4>Devloped by <i>Om Ujjwal</i></h4>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
